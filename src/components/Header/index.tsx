@@ -1,8 +1,12 @@
 import { MdShoppingCart } from 'react-icons/md'
 import { Link } from 'react-router-dom'
+import { useCart } from '../../hooks/useCart'
 import { StyledContainer, StyledHeader } from './styles';
 
 export function Header (){
+  const { cart } = useCart();
+  const cartSize = cart.length
+  
   return(
     <StyledHeader>
       <StyledContainer>
@@ -10,7 +14,7 @@ export function Header (){
           <p>
             <strong>Meu carrinho</strong>
             <span>
-              2 itens
+              {cartSize === 1 ? `${cartSize} item` : `${cartSize} itens`}
             </span>
           </p>
           <Link to='/cart'>

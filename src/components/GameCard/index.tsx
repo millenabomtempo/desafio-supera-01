@@ -3,16 +3,16 @@ import { MdAddShoppingCart } from 'react-icons/md'
 import { AddToCart, GameCardContainer, GameCardInfo } from './styles'
 
 type GameCardProps = {
-  name?: string
-  price?: number
-  score?: number
-  image?: string
-  amount?: number
-  handleClick?: () => void
+  name: string
+  price: number
+  score: number
+  image: string
+  amount: number
+  handleClick: () => void
 }
 
 
-export function GameCard({name="teste", price=10, score=10, image='super-mario-odyssey.png', amount=10, handleClick}: GameCardProps) {
+export function GameCard({name, price, score, image, amount, handleClick}: GameCardProps) {
     
   return (
     <GameCardContainer>
